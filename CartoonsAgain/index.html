@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="myApp">
+<head>
+    <title>Cartoons</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/font-awesome.css" rel="stylesheet" />
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="row clearfix">
+            <div ng-controller="SearchController" class="form-group col-md-8 col-md-offset-2">
+                <ul class="nav-tabs nav">
+                    <li><a href="#/"><span class="fa fa-home"></span>&nbsp; Home</a></li>
+                    <li><a href="#/Add"><span class="fa fa-plus-circle"></span>&nbsp; Add</a></li>
+                    <li>
+                        <input type="text" class="form-control" placeholder="Search" ng-model="query">
+                    </li>
+                    <li>
+                        <div class="btn btn-default" ng-click="search(query)">
+                            <span class="fa fa-search"></span> &nbsp;
+                            Search
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row clearfix">
+            <div class="col-md-2 column">
+            </div>
+            <div class="col-md-8 column" ng-view>
+
+            </div>
+            <div class="col-md-2 column">
+            </div>
+        </div>
+    </div>
+   
+
+
+
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/_Cartoons.js"></script>
+</body>
+</html>

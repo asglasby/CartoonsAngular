@@ -1,0 +1,11 @@
+﻿
+<input type="number" ng-model="howMany" ng-init="howMany=10" />
+<h1>{{message}}</h1>
+<table class="table table-bordered table-hover table-striped table-responsive" >
+    <thead><tr><th ng-click="sort='name'">Name</th><th ng-click="sort='year'">Year</th><th>Description</th></tr></thead>
+    <tr ng-repeat="Cartoon in Cartoons | filter:search | orderBy: sort | limitTo: howMany " ng-click="showDetails(Cartoon)">
+        <td>{{Cartoon.name}}</td>
+        <td>{{Cartoon.year}}</td>
+        <td>{{Cartoon.description | Snippet}}</td>
+    </tr>
+</table>

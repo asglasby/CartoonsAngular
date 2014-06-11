@@ -1,0 +1,13 @@
+﻿<input type="text" placeholder="Name" ng-model="Name" />
+<input type="text" placeholder="Year" ng-model="Year" />
+<input type="text" placeholder="Description" ng-model="Description" />
+<input type="text" placeholder="Image URL" ng-model="Picture" />
+
+<div ng-show="!loading" class="btn btn-success"
+     ng-click="addCartoon(Name, Year, Description, Picture)">
+    <span class="fa fa-2x fa-linux"></span> &nbsp; Add Cartoon
+</div>
+
+<div ng-show="loading">
+    <span class="fa fa-spin fa-clock-o fa-5x"></span>
+</div>
